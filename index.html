@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - P5.JS Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container-header">
+            <div class="logo">
+                <h1>P5.JS Dashboard</h1>
+            </div>
+            <nav class="navbar">
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="#canvas" class="nav-link">Visualização</a></li>
+                    <li><a href="#items" class="nav-link">Itens</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HOME SECTION -->
+        <section id="home" class="section hero">
+            <div class="hero-content">
+                <h2>Bem-vindo ao Dashboard P5.JS</h2>
+                <p>Visualize dados de forma interativa e dinâmica com p5.js</p>
+                <button class="btn btn-primary" onclick="scrollToSection('dashboard')">Explorar Dashboard</button>
+            </div>
+        </section>
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboard" class="section dashboard">
+            <div class="container">
+                <h2>Dashboard Interativo</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-item">
+                        <h3>Estatísticas</h3>
+                        <div class="stat-box">
+                            <div class="stat-number">1,234</div>
+                            <div class="stat-label">Visualizações</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Desempenho</h3>
+                        <div class="stat-box">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Taxa de Sucesso</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Atividade</h3>
+                        <div class="stat-box">
+                            <div class="stat-number">567</div>
+                            <div class="stat-label">Interações</div>
+                        </div>
+                    </div>
+                    <div class="dashboard-item">
+                        <h3>Usuários</h3>
+                        <div class="stat-box">
+                            <div class="stat-number">234</div>
+                            <div class="stat-label">Ativos Hoje</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CANVAS SECTION -->
+        <section id="canvas" class="section canvas-section">
+            <div class="container">
+                <h2>Visualização com P5.JS</h2>
+                <p>Gráfico interativo que muda com seu mouse</p>
+                <div id="p5-container" class="p5-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- ITEMS SECTION -->
+        <section id="items" class="section items">
+            <div class="container">
+                <h2>Itens do Dashboard</h2>
+                <div class="items-grid">
+                    <div class="item-card">
+                        <div class="item-icon">📊</div>
+                        <h3>Análise de Dados</h3>
+                        <p>Visualize métricas e estatísticas em tempo real</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🎨</div>
+                        <h3>Gráficos Visuais</h3>
+                        <p>Representações visuais interativas com p5.js</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">⚡</div>
+                        <h3>Desempenho</h3>
+                        <p>Monitoramento de performance em tempo real</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🔒</div>
+                        <h3>Segurança</h3>
+                        <p>Dados protegidos com as melhores práticas</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">📱</div>
+                        <h3>Responsivo</h3>
+                        <p>Funciona perfeitamente em qualquer dispositivo</p>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-icon">🚀</div>
+                        <h3>Rápido</h3>
+                        <p>Carregamento ultrarrápido e otimizado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contato" class="section contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <p>Um dashboard interativo desenvolvido com HTML, JavaScript e p5.js para visualização de dados.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#items">Itens</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 P5.JS Dashboard. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ por João Krause</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/sketch.js"></script>
+</body>
+</html>
